@@ -20,7 +20,6 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     <style>
-        /* ریست کردن استایل‌ها */
         * {
             margin: 0;
             padding: 0;
@@ -34,7 +33,6 @@
             overflow-x: hidden;
         }
 
-        /* هدر */
         .header {
             background: #fff;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -47,42 +45,51 @@
         .header-top {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 1rem;
             display: flex;
             align-items: center;
             gap: 2rem;
         }
 
         .logo {
-            font-size: 1.5rem;
+            font-size: 3rem;
             font-weight: bold;
-            color: #ef394e;
+            color: #426eff;
             text-decoration: none;
             white-space: nowrap;
         }
 
-        /* جستجو */
         .search-section {
             flex-grow: 1;
             display: flex;
-            gap: 1rem;
+            position: relative;
+        }
+
+        .search-section {
+            flex-grow: 1;
+            display: flex;
             position: relative;
         }
 
         .search-bar {
             flex-grow: 1;
             position: relative;
-            background-color: #f4f4f4;
-            border-radius: 8px;
-            font-size: 0.9rem;
             display: flex;
             align-items: center;
-            padding-right: 10px; /* فاصله دادن از سمت راست */
+        }
+
+        .search-icon {
+            position: absolute;
+            right: 10px;
+            font-size: 1rem;
+            color: #666;
+            background: none;
+            border: none;
+            cursor: pointer;
         }
 
         .search-input {
-            width: 90%; /* عرض نوار جستجو کوتاه شده */
-            padding: 0.75rem 1rem;
+            flex-grow: 1;
+            padding: 0.75rem 2.5rem 0.75rem 1rem;
             border: 1px solid #ddd;
             border-radius: 8px;
             font-size: 0.9rem;
@@ -90,12 +97,6 @@
             color: #666;
         }
 
-        .search-icon {
-            width: 24px;
-            height: 24px;
-            fill: var(--color-icon-low-emphasis);
-            cursor: pointer;
-        }
 
         .bg-neutral-100 {
             background-color: #f4f4f4;
@@ -114,7 +115,7 @@
             color: #666;
         }
 
-        /* نوار ناوبری */
+
         .nav-bar {
             border-top: none;
             background: #fff;
@@ -129,7 +130,7 @@
         .nav-container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0.5rem 1rem;
+            padding: 2px;
             display: flex;
             align-items: center;
             gap: 2rem;
@@ -198,7 +199,7 @@
         }
 
         main {
-            padding-top: 160px;
+            padding-top: 100px;
         }
 
         @media (max-width: 768px) {
@@ -226,10 +227,10 @@
 
             <div class="search-section">
                 <div class="search-bar">
-                    <input type="text" class="search-input" placeholder="جستجو" />
                     <button class="search-icon">
                         <i class="fas fa-search"></i>
                     </button>
+                    <input type="text" class="search-input" placeholder="جستجو در کاربران..." />
                 </div>
             </div>
         </div>
