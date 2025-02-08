@@ -16,13 +16,16 @@ Route::view('profile', 'profile')
     ->middleware(['auth'])
     ->name('profile');
 
-Route::get('/upload', UploadCsv::class);
+Route::get('/add-file', UploadCsv::class)
+->name('addFile');
 
-Route::get('/students', StudentsList::class);
+Route::get('/users', StudentsList::class)
+->name('users');
 
 Route::get('/student-details/{id}', StudentDetails::class);
 
-Route::get('/chat', ChatBot::class);
+Route::get('/chat', ChatBot::class)
+->name('chat');
 
 
 
